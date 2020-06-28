@@ -1,12 +1,18 @@
 #include <kalmanutils/average_filter.h>
 #include <voltage_model.h>
 #include <algorithm>
-#include <vector>
 #include <Logger/logger.h>
- 
+#include <vector>
+
+#define WITHOUT_NUMPY
+
+#include "matplotlibcpp.h"
+
 using namespace std;
 using namespace model;
 using namespace filter;
+
+namespace plt = matplotlibcpp;
 
 float f()
 { 
@@ -21,18 +27,10 @@ float f()
 
 int main()
 {
-	/*
-	GameInterface g(3);
-	g.play(0);
-	g.play(1);
-	g.play(2);
-	g.play(4);
-	return 0;*/
-
 	int nSamples = 10*5+1;
 
-	vector<float> t(nSamples);
-	generate(t.begin(), t.end(), f);
+	vector<float> ti(nSamples);
+	generate(ti.begin(), ti.end(), f);
 
 	vector<float> avgSaved;
 	vector<float> xmSaved;
@@ -41,7 +39,7 @@ int main()
 
 	AverageFilter avgFilter;
 
-	for (int k = 0; k <= nSamples; k++)
+	for (int k = 0; k < nSamples; k++)
 	{
 		float xm = vModel.getVoltage();
 
@@ -51,9 +49,9 @@ int main()
 		xmSaved.push_back (xm);
 	}
 	
-	for (auto a : avgSaved)
-	{
-		log(a);
-	}
+	//plt::figure_size(8, 6);
+	plt::plot(ti, xmSaved, "g*--");
+	plt::plot(ti, avgSaved,"b--");
+	plt::show();
 
 }

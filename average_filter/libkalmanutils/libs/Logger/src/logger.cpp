@@ -3,12 +3,12 @@
 
 using namespace std;
 
-void log(string message)
+void toConsole(string message)
 {
 	cout << message << endl;
 }
 
-void log(float message)
+void toConsole(float message)
 {
 	cout << to_string(message) << endl;
 }

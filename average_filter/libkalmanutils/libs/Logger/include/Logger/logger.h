@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void log(string message);
-void log(float message);
+void toConsole(string message);
+void toConsole(float message);
 
 #endif
