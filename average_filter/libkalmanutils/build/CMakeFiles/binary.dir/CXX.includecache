@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/kalmanutils/average_filter.h
+
+../libs/Logger/include/Logger/logger.h
+string
+-
+
+../src/voltage_model.h
+
+/Users/patrickhayden/Documents/Development/learning_kalman_filters/average_filter/libkalmanutils/src/main.cpp
+kalmanutils/average_filter.h
+-
+voltage_model.h
+-
+algorithm
+-
+vector
+-
+Logger/logger.h
+-
+

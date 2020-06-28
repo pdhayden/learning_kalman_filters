@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++   -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/binary.dir/src/main.cpp.o CMakeFiles/binary.dir/src/average_filter.cpp.o CMakeFiles/binary.dir/src/voltage_model.cpp.o  -o binary  libs/Logger/liblogger.a 

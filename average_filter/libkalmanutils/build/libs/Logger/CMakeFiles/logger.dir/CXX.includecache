@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/patrickhayden/Documents/Development/learning_kalman_filters/average_filter/libkalmanutils/libs/Logger/src/logger.cpp
+iostream
+-
+string
+-
+
